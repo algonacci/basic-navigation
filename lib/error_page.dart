@@ -8,6 +8,7 @@ class ErrorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: const Text('Error Page Not Found!!'),

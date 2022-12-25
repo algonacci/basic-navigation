@@ -3,6 +3,7 @@ import 'package:basic_navigation/book_list_page.dart';
 import 'package:basic_navigation/error_page.dart';
 import 'package:basic_navigation/first_page.dart';
 import 'package:basic_navigation/main_page.dart';
+import 'package:basic_navigation/third_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -41,6 +42,8 @@ class LearnGeneratedRoute {
         var selectedBook = settings.arguments as Book;
         return createRoute(
             BookDetailPage(selectedBook: selectedBook), settings);
+      case ('/third-page'):
+        return createRoute(const ThirdPage(), settings);
       default:
         MaterialPageRoute(
           builder: (context) => const ErrorPage(),

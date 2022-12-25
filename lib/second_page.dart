@@ -33,6 +33,17 @@ class SecondPage extends StatelessWidget {
                 'Book List Page',
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pushNamed(
+                '/third-page',
+              ),
+              child: const Text(
+                'Third Page',
+              ),
+            ),
           ],
         ),
       ),
