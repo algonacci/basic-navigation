@@ -12,12 +12,28 @@ class SecondPage extends StatelessWidget {
         ),
         backgroundColor: Colors.green,
       ),
-      body: const Center(
-        child: Text(
-          'Second Page',
-          style: TextStyle(
-            fontSize: 36,
-          ),
+      body: Center(
+        child: Column(
+          children: [
+            const Text(
+              'Second Page',
+              style: TextStyle(
+                fontSize: 36,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pushNamed(
+                '/book-list-page',
+                arguments: 10,
+              ),
+              child: const Text(
+                'Book List Page',
+              ),
+            ),
+          ],
         ),
       ),
     );
