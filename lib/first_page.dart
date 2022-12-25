@@ -78,6 +78,20 @@ class FirstPage extends StatelessWidget {
                   'Using CanPop',
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/second-page');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepOrange,
+                ),
+                child: const Text(
+                  'Using Routes in the main.dart',
+                ),
+              ),
             ],
           ),
         ),

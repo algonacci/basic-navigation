@@ -93,6 +93,34 @@ class MainPage extends StatelessWidget {
                 'Using PushReplacement',
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/first-page');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.yellow,
+              ),
+              child: const Text(
+                'Using Routes',
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/first-pagess');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo,
+              ),
+              child: const Text(
+                'Go To Unknown Page and Get 404',
+              ),
+            ),
           ],
         ),
       ),

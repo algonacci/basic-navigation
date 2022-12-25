@@ -1,4 +1,7 @@
+import 'package:basic_navigation/error_page.dart';
+import 'package:basic_navigation/first_page.dart';
 import 'package:basic_navigation/main_page.dart';
+import 'package:basic_navigation/second_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +19,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MainPage(),
+      routes: {
+        '/main-page': (context) => const MainPage(),
+        '/first-page': (context) => FirstPage(),
+        '/second-page': (context) => const SecondPage(),
+      },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => const ErrorPage(),
+      ),
     );
   }
 }
