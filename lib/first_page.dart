@@ -46,6 +46,38 @@ class FirstPage extends StatelessWidget {
                   'Back Button',
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).maybePop();
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.amber,
+                ),
+                child: const Text(
+                  'Using MaybePop',
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (Navigator.of(context).canPop()) {
+                    debugPrint('Yes return');
+                  } else {
+                    debugPrint('No return');
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+                child: const Text(
+                  'Using CanPop',
+                ),
+              ),
             ],
           ),
         ),
