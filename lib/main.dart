@@ -1,5 +1,6 @@
 import 'package:basic_navigation/error_page.dart';
 import 'package:basic_navigation/first_page.dart';
+import 'package:basic_navigation/generate_route.dart';
 import 'package:basic_navigation/main_page.dart';
 import 'package:basic_navigation/second_page.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       onUnknownRoute: (settings) => MaterialPageRoute(
         builder: (context) => const ErrorPage(),
       ),
+      onGenerateRoute: LearnGeneratedRoute.generateRoute,
     );
   }
 }
